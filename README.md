@@ -71,3 +71,6 @@ Finally a function is provided for accessing deep links within your Xero Organis
 `RukoXero\GetDeepLink()` will provide the prefix with your Organisation's shortcode to construct a deep link to pages within Xero.  
 
 Just append the redirect required, eg. `$connectedAppsLink = RukoXero\GetDeepLink() . "&redirecturl=/Settings/ConnectedApps/";`
+
+## Data Storage and Disclaimer
+All configuration data, including the sensitive ClientSecret and Token, are stored within the Api_Xero table within your Rukovoditel database. Please ensure adequate security measures for this information. Note that IANAWD (I Am Not A Web Developer), and I have written RukoXero for the needs of my business to the best of my knowledge and abilities. If you are aware of any glaring security flaws or other monstrosities, bug reports or contributions are greatly appreciated.
