@@ -792,16 +792,16 @@
         },
         {
             "name": "xeroapi/xero-php-oauth2",
-            "version": "2.18.0",
+            "version": "2.19.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/XeroAPI/xero-php-oauth2.git",
-                "reference": "a9ff17ea07f600f8dab4a837b24b9c059f08eda5"
+                "reference": "b451db1ab381e4535c0e0e65b32eaeaf9a091165"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/XeroAPI/xero-php-oauth2/zipball/a9ff17ea07f600f8dab4a837b24b9c059f08eda5",
-                "reference": "a9ff17ea07f600f8dab4a837b24b9c059f08eda5",
+                "url": "https://api.github.com/repos/XeroAPI/xero-php-oauth2/zipball/b451db1ab381e4535c0e0e65b32eaeaf9a091165",
+                "reference": "b451db1ab381e4535c0e0e65b32eaeaf9a091165",
                 "shasum": ""
             },
             "require": {
@@ -846,9 +846,9 @@
             ],
             "support": {
                 "issues": "https://github.com/XeroAPI/xero-php-oauth2/issues",
-                "source": "https://github.com/XeroAPI/xero-php-oauth2/tree/2.18.0"
+                "source": "https://github.com/XeroAPI/xero-php-oauth2/tree/2.19.0"
             },
-            "time": "2022-11-11T17:50:08+00:00"
+            "time": "2022-12-01T23:07:49+00:00"
         }
     ],
     "packages-dev": [],
