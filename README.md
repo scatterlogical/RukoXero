@@ -55,8 +55,9 @@ $contacts = $AccountingApi->getContacts(RukoXero\GetTenantID());
 echo $contacts[0];
 ```
 
-`RukoXero\GetApiInstance()` retrieves an authorized instance to the Xero API, selected by RukoXero\XeroApiEnum. This defaults to **AccountingApi**.
-The other options are:
+`RukoXero\GetApiInstance($api)` retrieves an authorized instance to the Xero API, selected with *$api*. 
+Options for $api are:
+- AccountingApi (default if unspecified)
 - AssetApi
 - ProjectApi
 - FilesApi
