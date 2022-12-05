@@ -44,4 +44,30 @@ hopefully displaying a successful connection to your organisation.
 
 
 ## API Access
+The XeroAPI should now be accessible through any PHP scripting sections within Rukovoditel.  
 
+The basic syntax for accessing API calls is as such:  
+```
+$AccountingApi = RukoXero\GetApiInstance(RukoXero\XeroApiEnum::AccountingApi);
+$contacts = $AccountingApi->getContacts(RukoXero\GetTenantID());
+echo $contacts[0];
+```
+
+`RukoXero\GetApiInstance()` retrieves an authorized instance to the Xero API, selected by RukoXero\XeroApiEnum. This defaults to **AccountingApi**.
+The other options are:
+- AssetApi
+- ProjectApi
+- FilesApi
+- PayrollAuApi
+- PayrollNzApi
+- PayrollUkApi
+- AppStoreApi
+
+Once you have received your API instance, you can make calls by providing the required TenantID with RukoXero\GetTenantID().  
+[See here for Xero's API Reference](https://xeroapi.github.io/xero-php-oauth2/docs/v2/accounting/index.html).
+
+## Deep Links
+Finally a function is provided for accessing deep links within your Xero Organisation. [See here for more info on deep links](https://developer.xero.com/documentation/guides/how-to-guides/deep-link-xero/).  
+`RukoXero\GetDeepLink()` will provide the prefix with your Organisation's shortcode to construct a deep link to pages within Xero.  
+
+Just append the redirect required, eg. `$connectedAppsLink = RukoXero\GetDeepLink() . "&redirecturl=/Settings/ConnectedApps/";`
