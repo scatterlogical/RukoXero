@@ -47,7 +47,7 @@ namespace RukoXero {
             DBStorage::_CreateVar('XERO_CLIENTID');
             DBStorage::_CreateVar('XERO_CLIENTSECRET');
             DBStorage::_CreateVar('XERO_REDIRECTURI');
-            DBStorage::_CreateVar('XERO_SCOPES');
+            DBStorage::_CreateVar('XERO_SCOPES', "offline_access");
             DBStorage::_CreateVar('XERO_STATE');
             DBStorage::_CreateVar('XERO_TOKEN_TOKEN');
             DBStorage::_CreateVar('XERO_TOKEN_EXPIRES');
