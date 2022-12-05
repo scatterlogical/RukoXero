@@ -102,7 +102,7 @@ echo '<div style="padding:10px; text-align:center"><h4>' . $message . '</h4><hr>
 //do this down here so any error is displayed at the bottom
 if (isset($_GET['state']) && isset($_GET['code'])) {
     RukoXero\Authentication\GetToken($_GET['state'], $_GET['code']);
-    $url = 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['SCRIPT_NAME'] . '?module=RukoXero/admin_page/index';
+    $url = 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['SCRIPT_NAME'] . '?module=rukoxero/admin_page/index';
     echo '<script type="text/javascript"> window.location.replace("' . $url . '") </script>';
 }
 
