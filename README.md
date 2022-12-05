@@ -45,6 +45,7 @@ hopefully displaying a successful connection to your organisation.
 
 ## API Access
 The XeroAPI should now be accessible through any PHP scripting sections within Rukovoditel.  
+![image](https://user-images.githubusercontent.com/3754911/205532864-f6da7dea-7293-491b-b91d-74b60833784e.png)  
 
 The basic syntax for accessing API calls is as such:  
 ```
