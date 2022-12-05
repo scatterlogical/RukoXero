@@ -5,24 +5,20 @@ namespace RukoXero {
     use XeroAPI;
     use GuzzleHttp;
 
-    enum XeroApiEnum
-    {
-        case AccountingApi;
-        case AssetApi;
-        case ProjectApi;
-        case FilesApi;
-        case PayrollAuApi;
-        case PayrollNzApi;
-        case PayrollUkApi;
-        case AppStoreApi;
-    }
-    ;
-
     /**
      * Returns an authorized instance of the Xero API
-     * $api: XeroApiEnum specifying which API to return
+     * $api: string specifying which API to return from list:
+     * 
+     * AccountingApi (default)
+     * AssetApi
+     * ProjectApi
+     * FilesApi
+     * PayrollAuApi
+     * PayrollNzApi
+     * PayrollUkApi
+     * AppStoreApi
      */
-    function GetAPIInstance(XeroApiEnum $api = XeroApiEnum::AccountingApi)
+    function GetAPIInstance(string $api = 'AccountingApi')
     {
         Authentication\RenewToken();
 
@@ -30,49 +26,50 @@ namespace RukoXero {
         $config = XeroAPI\XeroPHP\Configuration::getDefaultConfiguration()->setAccessToken($token);
 
         switch ($api) {
-            case XeroApiEnum::AccountingApi:
+            default:
+            case 'AccountingApi':
                 $apiInstance = new XeroAPI\XeroPHP\Api\AccountingApi(
                     new GuzzleHttp\Client(),
                     $config
                 );
                 break;
-            case XeroApiEnum::AssetApi:
+            case 'AssetApi':
                 $apiInstance = new XeroAPI\XeroPHP\Api\AssetApi(
                     new GuzzleHttp\Client(),
                     $config
                 );
                 break;
-            case XeroApiEnum::ProjectApi:
+            case 'ProjectApi':
                 $apiInstance = new XeroAPI\XeroPHP\Api\ProjectApi(
                     new GuzzleHttp\Client(),
                     $config
                 );
                 break;
-            case XeroApiEnum::FilesApi:
+            case 'FilesApi':
                 $apiInstance = new XeroAPI\XeroPHP\Api\FilesApi(
                     new GuzzleHttp\Client(),
                     $config
                 );
                 break;
-            case XeroApiEnum::PayrollAuApi:
+            case 'PayrollAuApi':
                 $apiInstance = new XeroAPI\XeroPHP\Api\PayrollAuApi(
                     new GuzzleHttp\Client(),
                     $config
                 );
                 break;
-            case XeroApiEnum::PayrollNzApi:
+            case 'PayrollNzApi':
                 $apiInstance = new XeroAPI\XeroPHP\Api\PayrollNzApi(
                     new GuzzleHttp\Client(),
                     $config
                 );
                 break;
-            case XeroApiEnum::PayrollUkApi:
+            case 'PayrollUkApi':
                 $apiInstance = new XeroAPI\XeroPHP\Api\PayrollUkApi(
                     new GuzzleHttp\Client(),
                     $config
                 );
                 break;
-            case XeroApiEnum::AppStoreApi:
+            case 'AppStoreApi':
                 $apiInstance = new XeroAPI\XeroPHP\Api\AppStoreApi(
                     new GuzzleHttp\Client(),
                     $config
