@@ -1,7 +1,7 @@
 <?php
 
 namespace RukoXero {
-   
+
     class DBStorage
     {
         private static function _CreateTable()
@@ -47,13 +47,26 @@ namespace RukoXero {
             DBStorage::_CreateVar('XERO_CLIENTID');
             DBStorage::_CreateVar('XERO_CLIENTSECRET');
             DBStorage::_CreateVar('XERO_REDIRECTURI');
-            DBStorage::_CreateVar('XERO_SCOPES', "offline_access");
+            DBStorage::_CreateVar('XERO_SCOPES');
             DBStorage::_CreateVar('XERO_STATE');
             DBStorage::_CreateVar('XERO_TOKEN_TOKEN');
             DBStorage::_CreateVar('XERO_TOKEN_EXPIRES');
             DBStorage::_CreateVar('XERO_TOKEN_TENANTID');
             DBStorage::_CreateVar('XERO_TOKEN_REFRESH');
             DBStorage::_CreateVar('XERO_TOKEN_ID');
+
+            if (DBStorage::GetScopes() == "")
+                DBStorage::SetScopes("offline_access openid email accounting.settings");
+
+            if (DBStorage::GetRedirectURI() == "") {
+                $url = "http" . (!empty($_SERVER['HTTPS']) ? "s" : "") .
+                    "://" . $_SERVER['SERVER_NAME'] . $_SERVER['SCRIPT_NAME'];
+
+                $url = preg_replace("/index.php/i", "plugins/rukoxero/modules/callback.php", $url);
+
+                DBStorage::SetRedirectURI($url);
+            }
+
         }
 
         static function GetClientID()
