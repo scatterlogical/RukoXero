@@ -1,4 +1,9 @@
-{
+{    
+    "config": {
+        "platform": {
+            "php": "8.0.0"
+        }
+    },
     "require": {
         "xeroapi/xero-php-oauth2": "^2.18"
     }
