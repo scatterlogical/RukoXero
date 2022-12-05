@@ -57,14 +57,14 @@ echo $contacts[0];
 
 `RukoXero\GetApiInstance($api)` retrieves an authorized instance to the Xero API, selected with *$api*. 
 Options for $api are:
-- AccountingApi (default if unspecified)
-- AssetApi
-- ProjectApi
-- FilesApi
-- PayrollAuApi
-- PayrollNzApi
-- PayrollUkApi
-- AppStoreApi
+- 'AccountingApi' (default if unspecified)
+- 'AssetApi'
+- 'ProjectApi'
+- 'FilesApi'
+- 'PayrollAuApi'
+- 'PayrollNzApi'
+- 'PayrollUkApi'
+- 'AppStoreApi'
 
 Once you have received your API instance, you can make calls by providing the required TenantID with RukoXero\GetTenantID().  
 [See here for Xero's API Reference](https://xeroapi.github.io/xero-php-oauth2/docs/v2/accounting/index.html).
