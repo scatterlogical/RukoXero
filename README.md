@@ -9,9 +9,10 @@ RukoXero is a plugin for Rukovoditel to access the Xero API from within PHP scri
 It handles the OAuth2 authentication process, and presents a simple interface to make API calls to Xero.  
 
 ## Installation and Setup
-Clone the respository to your **rukovoditel\plugins** directory, and in **rukovoditel\config\server.php**, 
-add 'RukoXero' to the available plugins definition, so it looks like this:
-`define('AVAILABLE_PLUGINS','ext,RukoXero');`  
+Clone the respository to your **rukovoditel\plugins\rukoxero** directory. **IMPORTANT: This is case sensitive.**  
+In **rukovoditel\config\server.php**, add 'rukoxero' (also case sensitive) to the available plugins definition, so it looks like this:
+`define('AVAILABLE_PLUGINS','ext,rukoxero');`  
+Please note that project dependencies require PHP >=8.1.0.
 
 XeroAPI Menu option should now be available to *administrators only*.
 ![image](https://user-images.githubusercontent.com/3754911/205526124-3c826cee-d819-4071-ad80-e84d75882be2.png)
