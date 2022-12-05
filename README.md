@@ -10,6 +10,7 @@ It handles the OAuth2 authentication process, and presents a simple interface to
 
 ## Installation and Setup
 Clone the respository to your **rukovoditel\plugins\rukoxero** directory. **IMPORTANT: This is case sensitive.**  
+
 In **rukovoditel\config\server.php**, add 'rukoxero' (also case sensitive) to the available plugins definition, so it looks like this:
 `define('AVAILABLE_PLUGINS','ext,rukoxero');`  
 
